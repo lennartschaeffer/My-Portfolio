@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <header>
+        <div id="name-header">
+          <a href="#"><h2>Lennart Schaeffer</h2></a>
+        </div>
+        <div>
+          <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill-set">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li id="sidebarIcon" onclick="showSideBar()">
+              <img
+                src="/icons/menu.png"
+                alt=""
+                width="25"
+                onclick="showSideBar()"
+                id="menu"
+              />
+            </li>
+          </ul>
+          <ul class="sidebar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill-set">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <img
+                src="/icons/exit.png"
+                alt=""
+                width="30"
+                onclick="removeSideBar()"
+                id="exit"
+              />
+            </li>
+          </ul>
+        </div>
+      </header>
+      <section id="home">
+        <div class="home-page-content">
+          <div class="text-content">
+            <div class="main-text">
+              <h1>
+                Hi, I'm Lennart,<br />
+                first Year Computer Science student<br />at Dalhousie
+                University.
+              </h1>
+            </div>
+            <div class="other-text">
+              <h3>
+                I have a passion for Web Development and am an aspiring
+                Full-Stack Software Engineer
+              </h3>
+            </div>
+          </div>
+          <img src="/images/mypicture.png" alt="" />
+        </div>
+      </section>
+    </div>
+    <section id="about" class="hidden">
+      <h1>About Me</h1>
+      <div class="about-info">
+        <div class="about-tabs">
+          <article class="about-img">
+            <img src="/images/football.JPG" alt="" />
+          </article>
+          <article class="about-article">
+            <div class="button-container">
+              <button class="tab-buttons active" data-id="personal-info">
+                Personal Info
+              </button>
+              <button class="tab-buttons" data-id="education">Education</button>
+              <button class="tab-buttons" data-id="programming-exp">
+                Programming Experience
+              </button>
+            </div>
+            <article class="about-content">
+              <div class="content active" id="personal-info">
+                <h4>Personal Information</h4>
+                <p>
+                  From age 2 to 14, I lived on an island called Curacao, where I
+                  grew up loving to play soccer, as well as becoming proficient
+                  in English, Dutch, and some Spanish. When I moved back to
+                  Canada in 2020, I took an interest in football, and also
+                  became very enthusiastic in fitness and strength training.
+                </p>
+              </div>
+              <div class="content" id="education">
+                <h4>My Education</h4>
+                <p>
+                  From kindergarten to grade 9 I attended the International
+                  School of Curacao. When I moved to Canada in 2020, I enrolled
+                  in Riverview High School in New Brunswick, where I graduated
+                  in 2023. I am currently in my first year in a Bachelor of
+                  Computer Science at Dalhousie University. My first semester I
+                  was able to maintain a 4.0 GPA, in courses such as Intro to
+                  Object Oriented Programming, Intro to Computer Systems,and
+                  Calculus in Computer Science.
+                </p>
+              </div>
+              <div class="content" id="programming-exp">
+                <h4>Programming Experience</h4>
+                <p>
+                  I began coding in my first semester of grade 12, and since
+                  then I've loved creating things with programming, and
+                  utilizing my coding skills to solve problems. I have knowledge
+                  in programming languages such as Java, Python, JavaScript,
+                  HTML/CSS, and experience in robotics-oriented programming.
+                </p>
+              </div>
+            </article>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="skill-set" class="hidden">
+      <h1>My Projects</h1>
+      <div class="skill-content">
+        <div class="projects">
+          <div class="p1">
+            <img src="/projects/pokemonjs.png" alt="" />
+            <p>Pokemon Card <br />Generator</p>
+          </div>
+          <div class="p2">
+            <img src="/projects/weatherjs.png" alt="" />
+            <p>Weather App</p>
+          </div>
+          <div class="p3">
+            <img src="/projects/workoutjs.png" alt="" />
+            <p>Workout Tracker</p>
+          </div>
+          <div class="p4">
+            <img src="/projects/pickleball-project.png" alt="" />
+            <p>Pickleball Team Generator</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="hidden">
+      <h1>Contact</h1>
+      <div class="input-info">
+        <img src="typew.png" alt="" />
+        <p>
+          If you would like to contact me, you can reach <br />
+          me through my email <b>lennartschaeffer@hotmail.com</b>. <br />Thanks
+          for checking out my page!
+        </p>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
