@@ -13,73 +13,74 @@
     />
   </head>
   <body>
-    <div class="home">
-      <header>
-        <div id="name-header">
-          <a href="#"><h2>Lennart Schaeffer</h2></a>
-        </div>
-        <div>
-          <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skill-set">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li id="sidebarIcon" onclick="showSideBar()">
-              <img
-                src="/icons/menu.png"
-                alt=""
-                width="25"
-                onclick="showSideBar()"
-                id="menu"
-              />
-            </li>
-          </ul>
-          <ul class="sidebar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skill-set">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-              <img
-                src="/icons/exit.png"
-                alt=""
-                width="30"
-                onclick="removeSideBar()"
-                id="exit"
-              />
-            </li>
-          </ul>
-        </div>
-      </header>
-      <section id="home">
-        <div class="home-page-content">
-          <div class="text-content">
-            <div class="main-text">
-              <h1>
-                Hi, I'm Lennart,<br />
-                first Year Computer Science student<br />at Dalhousie
-                University.
-              </h1>
-            </div>
-            <div class="other-text">
-              <h3>
-                I have a passion for Web Development and am an aspiring
-                Full-Stack Software Engineer
-              </h3>
-            </div>
+    <div id="header">
+      <div id="name-header">
+        <a href="#"><h2>Lennart Schaeffer</h2></a>
+      </div>
+      <div>
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill-set">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li id="sidebarIcon" onclick="showSideBar()">
+            <img
+              src="/icons/menu.png"
+              alt=""
+              width="25"
+              onclick="showSideBar()"
+              id="menu"
+            />
+          </li>
+        </ul>
+        <ul class="sidebar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill-set">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <img
+              src="/icons/exit.png"
+              alt=""
+              width="30"
+              onclick="removeSideBar()"
+              id="exit"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section id="home">
+      <div class="home-page-content">
+        <div class="text-content">
+          <div class="main-text">
+            <h1>
+              Hi, I'm Lennart, first Year Computer Science student at Dalhousie
+              University.
+            </h1>
           </div>
+          <div class="other-text">
+            <h3>
+              I have a passion for Web Development and am an aspiring Full-Stack
+              Software Engineer
+            </h3>
+          </div>
+        </div>
+        <div class="main-photo">
           <img src="/images/mypicture.png" alt="" />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <section id="about" class="hidden">
       <h1>About Me</h1>
+      <div class="line"><p>-</p></div>
       <div class="about-info">
         <div class="about-tabs">
-          <article class="about-img">
+          <div class="about-img">
+            <div class="tint"></div>
             <img src="/images/football.JPG" alt="" />
-          </article>
-          <article class="about-article">
+          </div>
+          <div class="about-article">
             <div class="button-container">
               <button class="tab-buttons active" data-id="personal-info">
                 Personal Info
@@ -89,7 +90,7 @@
                 Programming Experience
               </button>
             </div>
-            <article class="about-content">
+            <div class="about-content">
               <div class="content active" id="personal-info">
                 <h4>Personal Information</h4>
                 <p>
@@ -123,8 +124,8 @@
                   HTML/CSS, and experience in robotics-oriented programming.
                 </p>
               </div>
-            </article>
-          </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -165,3 +166,4 @@
     <script src="index.js"></script>
   </body>
 </html>
+
