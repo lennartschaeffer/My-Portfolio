@@ -11,11 +11,10 @@ body{
     width: 100%;
 }
 section{
-    min-height: 100vh;
     width: 100%;
-    max-width: 100%;
+    padding-bottom: 200px;
 }
-header{
+#header{
     margin-top: 30px;
     position: fixed;
     display: flex;
@@ -25,8 +24,9 @@ header{
     align-items: center;
     transition: 0.6s;
     max-width: 100%;
+    z-index: 1;
 }
-header.sticky{
+#header.sticky{
     margin-top: 0px;
     padding: 10px 0 10px 0;
     z-index: 10000;
@@ -77,18 +77,17 @@ header.sticky{
 }
 .home-page-content{
     display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 100px;
 }
 #home img{
     width: 350px;
     height: 650px;
-    margin-left: 100px;
     animation: fadeIn 5s;
     max-width: 100%;
 }
 #home h1{
-    margin-top: 250px;
     max-width: 100%;
 }
 .text-content{
@@ -106,34 +105,55 @@ header.sticky{
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
-#about{
-    padding: 200px 0px 250px 0px;
-}
 #about h1{
-    margin-bottom: 60px;
+    padding-top: 100px;
+    margin-bottom: 10px;
     text-align: center;
 }
-.about-info{
-    margin: 0% 10% 0% 20%;
+.line{
+    background-color: rgb(149, 155, 189);
+    margin: 0% 30% 0% 30%;
+}
+.line p{
+    color: rgb(149, 155, 189);
+    font-size: 1px;
+}
+#about-info{
+   display: flex;
+   justify-content: center;
+}
+.about-img{
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
 }
 #about img{
     width: 450px;
     border-radius: 10px;
+    text-align: center;
+    filter: grayscale(100%);
+}
+#about img:hover{
+    filter: grayscale(0%);
+    transition: 0.8s;
 }
 .about-tabs{
     display: flex;
     justify-content: center;
-    gap: 20px;
-    width: 95%;
-    max-width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+.about-article{
+    text-align: left;
+    width: 30%;
 }
 .button-container{
     display: flex;
 }
 .button-container button{
-    font-size: 1em;
+    font-size: 18px;
     color: white;
-    padding: 10px 15px 10px 15px;
+    padding: 3px 20px 3px 20px;
     background-color: black;
     border: 1px solid white;
     border-radius: 50px;
@@ -145,8 +165,8 @@ header.sticky{
 .about-content{
     margin-top: 20px;
     margin-left: 10px;
-    width: 70%;
     max-width: 100%;
+    text-align: center;
 }
 /* About content active and hidden */
 .content{
@@ -161,13 +181,14 @@ header.sticky{
     transition: 3s;
     visibility: visible;
     max-height: 1000px;
+    text-align: center;
 }
 .content.active h4{
     margin-bottom: 15px;
 }
 
 .tab-buttons.active{
-    background-color: white;
+    background-color: rgb(149, 155, 189);
     color: black;
 }
 /* skill set*/
@@ -241,7 +262,7 @@ header.sticky{
 }
 .input-info p{
     margin-top: 120px;
-    margin-left: 100px;
+    
 }
 .hidden{
     opacity: 0;
@@ -252,35 +273,87 @@ header.sticky{
 }
 
 @media (max-width:768px){
-    body {
+    html{
+        width: 100%;
+    }
+    body{
         overflow-x: hidden;
       }
+      /* home page*/
     #name-header{
         font-size: 10px;
     }
     .home-page-content{
+        justify-content:center;
         margin-left: 10px;
+        position: relative;
+        width: 100%;
     }
     .text-content{
-        font-size: 80%;
+        position: absolute;
+        width: 60%;
+        font-size: 60%;
+        z-index: 9;
     }
-
+    #home img{
+        animation: fadeIn 5s;
+        max-width: 100%;
+    }
     .navbar li a{
         display: none;
     }
     #menu{
         display: flex;
     }
+    /* about page*/
+    #about img{
+        width: 350px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
     .about-tabs{
+        width:100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+    }
+    
+    
+    .about-article{
+        text-align: center;
+        width: 80%;
+    }
+    .about-img{
+        display: flex;
+        justify-content: center;
+    }
+    .about-article{
         display: block;
         align-items: center;
         justify-content: center;
     }
+    .button-container{
+        display: flex;
+        justify-content: center;
+    }
+    /* projects */
     .projects{
         display: block;
     }
+    .p1,.p2,.p3{
+        margin-bottom: 20px;
+    }
+    .p4 img{
+        width: 90%;
+        height: 90%;
+    }
+    /*Contact*/
     .input-info{
         font-size: 80%;
     }
-    
+    .input-info img{
+        width: 60%;
+        height: 60%;
+    }
 }
