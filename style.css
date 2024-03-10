@@ -118,10 +118,7 @@ section{
     color: rgb(149, 155, 189);
     font-size: 1px;
 }
-#about-info{
-   display: flex;
-   justify-content: center;
-}
+
 .about-img{
     position: relative;
     overflow: hidden;
@@ -258,11 +255,8 @@ section{
 .input-info{
     margin-top: 100px;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-.input-info p{
-    margin-top: 120px;
-    
 }
 .hidden{
     opacity: 0;
@@ -313,18 +307,20 @@ section{
     }
     .about-tabs{
         width:100%;
-        display: block;
+        display: inline-block;
         align-items: center;
         justify-content: center;
         font-size: 10px;
     }
-    
-    
     .about-article{
         text-align: center;
-        width: 80%;
+        width: 50%;
     }
     .about-img{
+        display: flex;
+        justify-content: center;
+    }
+    .block-display-about-container{
         display: flex;
         justify-content: center;
     }
@@ -336,6 +332,9 @@ section{
     .button-container{
         display: flex;
         justify-content: center;
+    }
+    .button-container button{
+        font-size: 10px;
     }
     /* projects */
     .projects{
@@ -350,10 +349,11 @@ section{
     }
     /*Contact*/
     .input-info{
-        font-size: 80%;
+        font-size: 60%;
     }
     .input-info img{
-        width: 60%;
-        height: 60%;
+        width: 100px;
+        height: 100px;
     }
 }
+
